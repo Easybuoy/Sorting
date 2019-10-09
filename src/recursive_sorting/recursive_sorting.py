@@ -4,7 +4,7 @@ def merge(arrA, arrB):
     merged_arr = []
     # TO-DO
 
-    while len(arrA) and len(arrB) != 0:
+    while len(arrA) and len(arrB):
         if(arrA[0] <= arrB[0]):
             merged_arr.append(arrA.pop(0))
         else:
