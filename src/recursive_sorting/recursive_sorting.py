@@ -19,13 +19,10 @@ def merge_sort(arr):
     if len(arr) < 2:
         return arr
     midPoint = len(arr) // 2
-    arr1 = arr[:midPoint]
-    arr2 = arr[midPoint:]
-
-    start = merge_sort(arr1)
-    end = merge_sort(arr2)
-
-    return merge(start, end)
+    arr1 = merge_sort(arr[:midPoint])
+    arr2 = merge_sort(arr[midPoint:])
+    
+    return merge(arr1, arr2)
 
 
 print(merge_sort([1, 5, 8, 4, 2, 9, 6, 0, 3, 7]))
